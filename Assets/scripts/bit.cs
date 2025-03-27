@@ -6,7 +6,7 @@ public class bit : MonoBehaviour
 {
     // Start is called before the first frame update
     SpriteRenderer spriteRenderer;
-    bool state = false;
+   public bool state = false;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
