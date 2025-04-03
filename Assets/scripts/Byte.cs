@@ -31,4 +31,102 @@ public class Byte : MonoBehaviour
         if (bits[7].state) { value += 128; }
 
     }
+
+    public void SetByte(int NewValue)
+    {
+        if (NewValue > 255)
+        {
+            NewValue = 255;
+        }
+
+        value = NewValue;
+
+        if (NewValue >= 128)
+        {
+            bits[7].state = true;
+            NewValue -= 128;
+        }
+
+        else
+        {
+            bits[7].state = false;
+        }
+
+        if (NewValue >= 64)
+        {
+            bits[6].state = true;
+            NewValue -= 64;
+        }
+
+        else
+        {
+            bits[6].state = false;
+        }
+
+        if (NewValue >= 32)
+        {
+            bits[5].state = true;
+            NewValue -= 32;
+        }
+
+        else
+        {
+            bits[5].state = false;
+        }
+
+        if (NewValue >= 16)
+        {
+            bits[4].state = true;
+            NewValue -= 16;
+        }
+
+        else
+        {
+            bits[4].state = false;
+        }
+
+        if (NewValue >= 8)
+        {
+            bits[3].state = true;
+            NewValue -= 8;
+        }
+
+        else
+        {
+            bits[3].state = false;
+        }
+
+        if (NewValue >= 4)
+        {
+            bits[2].state = true;
+            NewValue -= 4;
+        }
+
+        else
+        {
+            bits[2].state = false;
+        }
+
+        if (NewValue >= 2)
+        {
+            bits[1].state = true;
+            NewValue -= 2;
+        }
+
+        else
+        {
+            bits[1].state = false;
+        }
+
+        if (NewValue >= 1)
+        {
+            bits[0].state = true;
+            NewValue -= 1;
+        }
+
+        else
+        {
+            bits[0].state = false;
+        }
+    }
 }
