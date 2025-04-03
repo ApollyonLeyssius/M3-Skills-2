@@ -16,6 +16,6 @@ public class ByteSet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        myByte.SetByte(NewValue);
     }
 }
