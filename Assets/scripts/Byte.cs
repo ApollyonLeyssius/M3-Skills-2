@@ -17,6 +17,11 @@ public class Byte : MonoBehaviour
     {
         Bin2dec();
     }
+    public string getHex()
+    {
+        string HexValue = value.ToString("X2");
+        return HexValue;
+    }
 
     public void Bin2dec()
     {
